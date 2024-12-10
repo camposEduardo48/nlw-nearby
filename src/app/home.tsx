@@ -22,7 +22,7 @@ const Home = () => {
 
   return (
     <View style={{ flex: 1, padding: 30 }}>
-      <Text>Home </Text>
+      <Text>Home</Text>
       <Categories data={categories} />
     </View>
   )
