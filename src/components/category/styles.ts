@@ -8,6 +8,7 @@ const s = StyleSheet.create({
     borderWidth: 1,
     borderColor: colors.gray[300],
     borderRadius: 8,
+    alignItems: 'center',
     justifyContent: 'center',
     flexDirection: 'row',
     paddingHorizontal: 12,

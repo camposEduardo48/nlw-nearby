@@ -9,14 +9,23 @@ export type CategoriesProps = {
 
 type Props = {
   data: CategoriesProps
+  selected: string
+  onSelect: (id: string) => void
 }
 
-export const Categories = ({ data }: Props) => {
+export const Categories = ({ data, selected, onSelect }: Props) => {
   return (
     <FlatList
       data={data}
       keyExtractor={(item) => item.id}
-      renderItem={({ item }) => <Category name={item.name} iconId={item.id} />}
+      renderItem={({ item }) => (
+        <Category
+          name={item.name}
+          iconId={item.id}
+          onPress={() => onSelect(item.id)}
+          isSelected={item.id === selected}
+        />
+      )}
       horizontal
       showsHorizontalScrollIndicator={false}
       contentContainerStyle={s.content}
