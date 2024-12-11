@@ -32,7 +32,6 @@ const Home = () => {
 
       const { data } = await api.get(`/markets/category/${category}`)
       setMarkets(data)
-      console.log(data)
     } catch (err) {
       console.log(err)
       Alert.alert('Locais')
@@ -49,7 +48,7 @@ const Home = () => {
   }, [category])
 
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: '#cecece' }}>
       <Categories
         data={categories}
         onSelect={setCategory}

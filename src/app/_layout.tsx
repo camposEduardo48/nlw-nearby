@@ -6,6 +6,7 @@ import {
   useFonts,
 } from '@expo-google-fonts/rubik'
 import { Stack } from 'expo-router'
+import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import Loading from '../components/loading/index'
 import { colors } from '../styles/theme' // verificar o alias
 
@@ -22,12 +23,14 @@ const Layout = () => {
     return <Loading />
   }
   return (
-    <Stack
-      screenOptions={{
-        headerShown: false,
-        contentStyle: { backgroundColor: colors.gray[100] },
-      }}
-    />
+    <GestureHandlerRootView style={{ flex: 1 }}>
+      <Stack
+        screenOptions={{
+          headerShown: false,
+          contentStyle: { backgroundColor: colors.gray[100] },
+        }}
+      />
+    </GestureHandlerRootView>
   )
 }
 export default Layout
