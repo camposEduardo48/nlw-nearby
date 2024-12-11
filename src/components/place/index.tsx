@@ -28,7 +28,11 @@ export const Place = ({ data, ...rest }: Props) => {
       <Image style={s.image} source={{ uri: data.cover }} />
       <View style={s.content}>
         <Text style={s.name}>{data.name}</Text>
-        <Text style={s.description}>{data.description}</Text>
+        <Text style={s.description}>
+          {data.description.length > 30
+            ? `${data.description.substring(0, 55).trim()}...`
+            : data.description}
+        </Text>
         <View style={s.footer}>
           <IconTicket size={16} color={colors.red.base} />
           <Text style={s.tickets}>{data.coupons}cupons disponíveis</Text>
