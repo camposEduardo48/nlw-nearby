@@ -30,7 +30,7 @@ export const Place = ({ data, ...rest }: Props) => {
         <Text style={s.name}>{data.name}</Text>
         <Text style={s.description}>
           {data.description.length > 30
-            ? `${data.description.substring(0, 55).trim()}...`
+            ? `${data.description.substring(0, 50).trim()}...`
             : data.description}
         </Text>
         <View style={s.footer}>
