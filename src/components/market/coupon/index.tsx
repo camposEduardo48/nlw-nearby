@@ -5,7 +5,7 @@ import { colors } from '@/src/styles/theme'
 import s from './styles'
 
 type Props = {
-  code: string
+  code: string | null
 }
 
 const Coupon = ({ code }: Props) => {
